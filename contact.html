@@ -68,22 +68,22 @@
                 <p data-i18n="contact_subtitle">Let's bring your jewelry back to life</p>
             </div>
             <div class="contact-wrapper">
-                <form id="contact-form" class="contact-form">
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/xzdzooke" method="POST">
                     <div class="form-group">
                         <label for="name" data-i18n="form_name">Name</label>
-                        <input type="text" id="name" required>
+                        <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
                         <label for="phone" data-i18n="form_phone">Phone</label>
-                        <input type="tel" id="phone" required>
+                        <input type="tel" id="phone" name="phone" required>
                     </div>
                     <div class="form-group">
                         <label for="email" data-i18n="form_email">Email</label>
-                        <input type="email" id="email">
+                        <input type="email" id="email" name="email">
                     </div>
                     <div class="form-group">
                         <label for="message" data-i18n="form_message">Message</label>
-                        <textarea id="message" rows="5"></textarea>
+                        <textarea id="message" name="message" rows="5"></textarea>
                     </div>
                     <button type="submit" class="btn" data-i18n="form_submit">Send Message</button>
                 </form>
@@ -99,11 +99,21 @@
                         </div>
                     </div>
                     <div class="info-item">
+                        <div class="info-icon">🧩</div>
+                        <div class="info-text">
+                            <h4 data-i18n="contact_email">Email Us</h4>
+                            <p><a href="mailto:gblesersoldering@gmail.com"
+                                    style="color: var(--gold-primary);">gblesersoldering@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
                         <div class="info-icon">📍</div>
                         <div class="info-text">
                             <h4 data-i18n="contact_visit">Visit Us</h4>
-                            <p data-i18n="footer_address">Nagpur, Maharashtra, India</p>
-                            <p>Find us easily in the heart of the city</p>
+                            <p><strong>NG GOLD TESTING | Laser Soldering</strong></p>
+                            <p data-i18n="footer_address">Shop No. 10 & 11, Vijay Commercial Complex</p>
+                            <p>Opp Jaihind Complex, SBI ATM Side</p>
+                            <p>Raja Gopala Chari Street, Vijayawada-2</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -153,6 +163,5 @@
 
     <script src="main.js"></script>
 </body>
-
 
 </html>

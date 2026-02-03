@@ -849,7 +849,10 @@ section {
     position: relative;
     overflow: visible;
     cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
+
 
 .fab-button svg {
     width: 28px;
@@ -900,7 +903,12 @@ section {
     border-radius: 30px;
     gap: 10px;
     animation: pulse-whatsapp 2s infinite;
+    touch-action: manipulation;
+    /* Improve mobile tap response */
+    -webkit-tap-highlight-color: transparent;
+    /* Remove tap highlight on iOS */
 }
+
 
 .fab-whatsapp svg {
     width: 32px;
@@ -961,18 +969,62 @@ section {
     }
 
     .fab-whatsapp {
-        padding: 0 16px 0 12px;
+        width: auto;
+        max-width: calc(100vw - 40px);
+        /* Prevent overflow on small screens */
+        min-height: 50px;
+        /* Ensure touch target size */
+        padding: 0 14px 0 10px;
+        gap: 8px;
     }
 
     .fab-whatsapp svg {
-        width: 28px;
-        height: 28px;
+        width: 26px;
+        height: 26px;
     }
 
     .fab-whatsapp .fab-label {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+        letter-spacing: 0.3px;
     }
 }
+
+/* Extra small devices (phones in portrait, less than 576px) */
+@media (max-width: 576px) {
+    .floating-buttons {
+        bottom: 15px;
+        right: 15px;
+        gap: 10px;
+    }
+
+    .fab-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .fab-button svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .fab-whatsapp {
+        max-width: calc(100vw - 30px);
+        min-height: 48px;
+        padding: 0 12px 0 8px;
+        gap: 6px;
+    }
+
+    .fab-whatsapp svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .fab-whatsapp .fab-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.2px;
+    }
+}
+
 
 /* Footer */
 footer {
